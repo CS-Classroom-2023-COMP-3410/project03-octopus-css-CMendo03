@@ -1,0 +1,206 @@
+/* General body styles */
+body {
+    font-family: "Times New Roman", serif;
+    background-color: #C7ECF4; /* Baby blue background */
+    margin: 0;
+    padding: 0;
+}
+
+.important {
+    background-color: #90E0EF; /* Light blue background */
+    padding: 2px; /* Optional: Adds a little space around the text */
+    border-radius: 3px; /* Optional: Rounds the corners of the highlight */
+    font-weight: bold;
+}
+
+/* Header banner */
+#header {
+    background: linear-gradient(to right, #006C96, #00B0D4); /* Dark to light blue gradient */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    position: relative;
+}
+
+#header p {
+    font-style: italic;
+    margin: 0;
+    color: white; /* Changed to white */
+}
+
+/* Main content block */
+#main-content {
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #4682b4; /* Marine blue */
+}
+
+h2.introduction::after, h2.common-species::after {
+    font-style: italic;
+    content: "";
+    display: block;
+    width: 5%;
+    height: 4px;
+    background-color: #90E0EF;
+    margin: 5px 0 0 0;
+}
+
+h2:not(.introduction) {
+    font-size: calc(1.5em - 0.2em);
+    font-weight: bold;
+}
+
+h2.common-species {
+    text-align: left;
+    font-weight: bold;
+}
+
+h2.amazing-facts {
+    font-size: calc(1.5em - 0.2em);
+    font-weight: bold;
+}
+
+h2.anatomy {
+    font-weight: bold;
+    font-size: calc(1.5em - 0.4em);
+}
+
+h2.comparison {
+    font-weight: bold;
+    font-size: calc(1.5em - 0.6em);
+}
+
+h2.external-resources {
+    font-weight: bold;
+    font-size: calc(1.5em - 0.8em);
+}
+
+p, ul, ol {
+    color: #494A8B;
+}
+
+#quiz-section {
+    display: flex;
+    background-color: #90E0EF;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+#quiz-section h2 {
+    color: #4682b4;
+    margin: 0 0 10px;
+}
+
+#quiz-section img {
+    border: 5px solid purple;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#quiz-section form {
+    flex-grow: 1;
+    text-align: right;
+}
+
+#quiz-section label {
+    display: block;
+    color: #080D64;
+    font-weight: bold;
+    margin-bottom: 5px;
+    position: relative;
+    left: -9px;
+}
+
+#quiz-section input[type="text"] {
+    display: block;
+    margin-bottom: 10px;
+    margin-left: auto;
+    width: 45%;
+    padding: 8px;
+    border: 2px solid #277FA5;
+    border-radius: 5px;
+}
+
+#quiz-section input[type="submit"] {
+    background-color: #016994;
+    margin-left: 100px;
+    color: white;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    left: -172px;
+}
+
+#species-table {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+}
+
+#species-table table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1.5px solid black;
+}
+
+#species-table th {
+    background-color: #999999;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+#species-table td {
+    padding: 10px;
+    border: 1.5px solid black;
+}
+
+#species-table tr:nth-child(n+2) td {
+    color: purple;
+    text-align: left;
+}
+
+#species-table tr:nth-child(2) {
+    background-color: #C7ECF4;
+}
+
+#species-table tr:nth-child(3) {
+    background-color: white;
+}
+
+#footer {
+    background: #016994;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#footer p {
+    color: white;
+}
+
+ul li::marker {
+    color: #00B4D8;
+}
+

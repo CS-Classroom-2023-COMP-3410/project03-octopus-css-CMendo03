@@ -4,28 +4,249 @@
 <head>
     <meta charset="UTF-8">
     <title>The Fascinating World of Octopuses</title>
+    <!-- Internal CSS for general styles -->
+    <style>
+        /* General body styles */
+        body {
+            font-family: "Times New Roman", serif;
+            background-color: #C7ECF4; /* Baby blue background */
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .important {
+            background-color: #90E0EF; /* Light blue background */
+            padding: 2px; /* Optional: Adds a little space around the text */
+            border-radius: 3px; /* Optional: Rounds the corners of the highlight */
+            font-weight: bold;
+
+        }
+
+        /* Header banner */
+        #header {
+            background: linear-gradient(to right, #006C96, #00B0D4); /* Dark to light blue gradient */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        #header p {
+            font-style: italic;
+            margin: 0;
+            color: white; /* Changed to white */
+        }
+
+        /* Main content block */
+        #main-content {
+            background-color: white;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #4682b4; /* Marine blue */
+        }
+
+        h2.introduction::after, h2.common-species::after {
+            font-style: italic; /* Make the header bold */
+            content: "";
+            display: block;
+            width: 5%;
+            height: 4px;
+            background-color: #90E0EF;
+            margin: 5px 0 0 0;
+        }
+
+        h2:not(.introduction) {
+            font-size: calc(1.5em - 0.2em);
+            font-weight: bold; /* Make the header bold */
+        }
+
+        h2.common-species {
+            text-align: left;
+            font-weight: bold; /* Make the header bold */
+        }
+
+        h2.amazing-facts {
+            font-size: calc(1.5em - 0.2em); /* Slightly smaller font */
+            font-weight: bold; /* Make the header bold */
+        }
+
+        h2.anatomy {
+            font-weight: bold; /* Make the header bold */
+            font-size: calc(1.5em - 0.4em); /* Slightly smaller font */
+        }
+
+        h2.comparison {
+            font-weight: bold; /* Make the header bold */
+            font-size: calc(1.5em - 0.6em); /* Smaller font */
+        }
+
+        h2.external-resources {
+            font-weight: bold; /* Make the header bold */
+            font-size: calc(1.5em - 0.8em); /* Slightly larger font */
+        }
+
+        p {
+            color: #494A8B;
+        }
+
+        ul, ol {
+            color: #494A8B;
+        }
+
+        #quiz-section {
+            display: flex;
+            background-color: #90E0EF; /* Light blue rectangle */
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        #quiz-section h2 {
+            color: #4682b4; /* Marine blue */
+            margin: 0 0 10px;
+        }
+
+        #quiz-section img {
+            border: 5px solid purple;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        #quiz-section form {
+            flex-grow: 1;
+            text-align: right;
+            
+        }
+
+        #quiz-section label {
+            display: block;
+            color: #080D64;
+            font-weight: bold;
+            margin-bottom: 5px;
+            position: relative;
+            left: -9px;
+        }
+
+        #quiz-section input[type="text"] {
+            display: block;
+            margin-bottom: 10px;
+            margin-left: auto; /* Pushes the input box to the right */
+            width: 45%;
+            padding: 8px;
+            border: 2px solid #277FA5; /* Blue border around text input boxes */
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        #quiz-section input[type="submit"] {
+            background-color: #016994; /* Dark blue button */
+            margin-left: 100px; /* Moves the button slightly to the left */
+            color: white;
+            padding: 5px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: relative;
+            left: -172px;
+
+        }
+
+        #species-table {
+            text-align: center;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+        }
+
+        #species-table table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 100%;
+            border: 1.5px solid black;
+        }
+
+        #species-table th {
+            background-color: #999999;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+
+        #species-table td {
+            padding: 10px;
+            border: 1.5px solid black;
+
+        }
+
+        /* Added rule to make words purple in the rows below the grey row */
+        #species-table tr:nth-child(n+2) td {
+            color: purple;
+            text-align: left;
+        }
+
+        #species-table tr:nth-child(2) {
+            background-color: #C7ECF4; /* Match background */
+        }
+
+        #species-table tr:nth-child(3) {
+            background-color: white;
+        }
+
+        #footer {
+            background: #016994;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin: 20px auto; /* Centers the footer */
+            max-width: 800px; /* Matches the header width */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for distinction */
+        }
+
+
+        #footer p {
+            color: white; /* Changed to white */
+        }
+
+        ul li::marker {
+            color: #00B4D8; /* Change this to your desired bullet color */
+        }
+
+    </style>
 </head>
 
 <body>
     <!-- Header Section -->
     <div id="header">
         <h1>The Fascinating World of Octopuses</h1>
-        <p>Welcome to this intriguing corner of the internet!</p>
+        <p style="text-align: left;">Welcome to this intriguing corner of the internet!</p>
+
     </div>
 
     <!-- Main Content -->
     <div id="main-content">
 
         <!-- Introduction -->
-        <h2>Introduction</h2>
+        <h2 class="introduction">INTRODUCTION</h2>
         <p>
             Octopuses are among the most fascinating creatures in the ocean.
             They are known for their intelligence and remarkable adaptability.
         </p>
 
         <!-- Amazing Facts -->
-        <h3>Amazing Facts</h3>
-        <!-- Unordered list -->
+        <h2 class="amazing-facts">AMAZING FACTS</h2>
+
         <ul>
             <li>They have three hearts.</li>
             <li>They can change color.</li>
@@ -33,15 +254,14 @@
         </ul>
 
         <!-- Anatomy -->
-        <h4>Anatomy</h4>
+        <h2 class="anatomy">Anatomy</h2>
         <p>
             An octopus's anatomy is as unique as it is fascinating.
             The <span class="important">mantle</span>, for example, helps in respiration and jet propulsion.
         </p>
 
         <!-- Comparison with other Cephalopods -->
-        <h5>Comparison with Other Cephalopods</h5>
-        <!-- Ordered list -->
+        <h2 class="comparison">Comparison with Other Cephalopods</h2>
         <ol>
             <li>Squid</li>
             <li>Cuttlefish</li>
@@ -49,7 +269,7 @@
         </ol>
 
         <!-- External Resources -->
-        <h6>External Resources</h6>
+        <h2 class="external-resources">External Resources</h2>
         <p>
             For more information, visit these websites:
             <a href="https://www.oceana.org/" target="_blank">Oceana</a> |
@@ -58,29 +278,25 @@
 
         <!-- Fun Experiment: Octopus Quiz -->
         <div id="quiz-section">
-
-            <!-- Image -->
-            <img src="octopus-image.png" alt="Image of an octopus" width="100">
-
-            <h2>Octopus Quiz</h2>
+            <div>
+                <h2>OCTOPUS QUIZ</h2>
+                <img src="octopus-image.png" alt="Image of an octopus" width="70">
+            </div>
             <form action="/submit-quiz" method="POST">
-                <!-- Question 1 -->
                 <label for="question1">How many hearts does an octopus have?</label>
-                <input type="text" id="question1" name="question1"><br>
+                <input type="text" id="question1" name="question1">
 
-                <!-- Question 2 -->
                 <label for="question2">Can octopuses change color? (Yes/No)</label>
-                <input type="text" id="question2" name="question2"><br>
+                <input type="text" id="question2" name="question2">
 
                 <input type="submit" value="Submit Quiz">
             </form>
         </div>
-
     </div> <!-- End of main-content -->
 
     <!-- Table -->
     <div id="species-table">
-        <h2>Common Octopus Species</h2>
+        <h2 class="common-species">Common Octopus Species</h2>
         <table border="1">
             <tr>
                 <th>Species</th>
@@ -104,11 +320,9 @@
     <div id="footer">
         <p>
             &copy; 2023 The Fascinating World of Octopuses. All rights reserved.
-            <!-- HTML entities for special characters -->
             Fun Fact: The plural of "Octopus" can be both "Octopuses" &amp; "Octopi" &lt;3
         </p>
     </div>
-
 </body>
 
 </html>
